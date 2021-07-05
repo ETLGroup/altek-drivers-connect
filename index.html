@@ -26,8 +26,11 @@
       function DetectAndServe() {
         let os = getMobileOperatingSystem();
         if (os === "Android") {
-          window.location.href =
-            "https://play.google.com/store/apps/details?id=au.com.altekdrivers";
+					const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+
+					window.location.replace(url);
+					// window.location.href =
+          //   "https://play.google.com/store/apps/details?id=au.com.altekdrivers";
         } else if (os === "iOS") {
           window.location.href = "https://apps.apple.com/us/app/altek-drivers/id1549665236";
         }
